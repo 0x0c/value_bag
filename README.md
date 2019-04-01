@@ -31,3 +31,20 @@ once set : 200
 once take : 0
 ----
 ```
+
+Here is an example to prevent chattering of a switch.
+
+```
+auto d = m2d::default_value_bag<int>(LOW, LOW);
+...
+
+int pin = digitalRead(10);
+if (pin != d.peek() && pin == HIGH) {
+	d.set(pin);
+}
+...
+
+if (d.take() == HIGH) {
+// Do something, called once after pin 10 becomes HIGH.
+}
+```
