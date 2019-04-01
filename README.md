@@ -31,3 +31,21 @@ once set : 200
 once take : 0
 ----
 ```
+
+Here is an example to prevent chattering a switch.
+
+```
+int previousValue = LOW;
+...
+
+int pin = digitalRead(10);
+if (pin != previousValue && pin == HIGH) {
+	d.set(pin);
+}
+previousValue = pin;
+...
+
+if (d.take() == HIGH) {
+// Do something, called once after pin 10 becomes HIGH.
+}
+```
