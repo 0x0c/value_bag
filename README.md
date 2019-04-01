@@ -35,14 +35,13 @@ once take : 0
 Here is an example to prevent chattering a switch.
 
 ```
-int previousValue = LOW;
+auto d = m2d::default_value_bag<int>(LOW, LOW);
 ...
 
 int pin = digitalRead(10);
-if (pin != previousValue && pin == HIGH) {
+if (pin != d.peek() && pin == HIGH) {
 	d.set(pin);
 }
-previousValue = pin;
 ...
 
 if (d.take() == HIGH) {
