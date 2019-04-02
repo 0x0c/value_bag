@@ -21,7 +21,7 @@ toggle peek : 100
 toggle take : 100
 toggle take : 200
 toggle take : 100
-toggle : the value becomes 100.
+toggle : the value becomes 00.
 toggle take : 100
 ----
 once peek : 100
