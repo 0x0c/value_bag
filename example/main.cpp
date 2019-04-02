@@ -22,7 +22,7 @@ int main(int argc, char const *argv[])
 	std::cout << "toggle take : " << t.take() << std::endl;
 	std::cout << "toggle take : " << t.take() << std::endl;
 	std::cout << "toggle take : " << t.take() << std::endl;
-	std::cout << "toggle : the value becomes 100." << std::endl;
+	std::cout << "toggle : the value becomes 200." << std::endl;
 	t.toggle();
 	std::cout << "toggle take : " << t.take() << std::endl;
 	std::cout << "----" << std::endl;
