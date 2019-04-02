@@ -32,7 +32,7 @@ once take : 0
 ----
 ```
 
-Here is an example to prevent chattering of a switch.
+Here is an example for Arduino to prevent chattering of a switch.
 
 ```
 auto d = m2d::default_value_bag<int>(LOW, LOW);
